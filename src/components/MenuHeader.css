@@ -1,0 +1,23 @@
+header{
+    background-color: #dfdfdf;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 4px solid #60d352;
+}
+
+img{
+    width: 10%;
+}
+
+.cart{
+    color: rgb(19, 133, 93);
+    padding: 10px 15px;
+    background-color: #dfdfdf ;
+    border-radius: 50px;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px #c3c3c3f0,
+    -5px -5px 10px #fcfcfc;
+    cursor: pointer;
+}
