@@ -2,16 +2,18 @@ header{
     background-color: #dfdfdf;
     padding: 20px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 4px solid #60d352;
 }
 
 img{
     width: 10%;
+    margin: 0 0 0 3%;
 }
 
 .cart{
+    margin: 0 7% 0 0;
     color: rgb(19, 133, 93);
     padding: 10px 15px;
     background-color: #dfdfdf ;
