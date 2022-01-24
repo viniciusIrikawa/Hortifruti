@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Card.css'
 
-function Card(props){
+function Card(){
   const [product, setProduct] = useState([])
 
   useEffect(() => {
@@ -14,20 +14,14 @@ function Card(props){
     return(
         <main>
             {product.map(item => 
-                 <div className="cardProduct" key={item.id}> 
+                <div className="cardProduct" key={item.id}> 
                     <h1 className="card-name"> Name: {item.name} </h1>
                     <h3 className="card-genus"> Genus: {item.genus} </h3>
                     <button> Add to cart </button>
-                 </div>
+                </div>
             )}
         </main>
-        // <main>
-        //     <div className="cardProduct"> 
-        //         <h1 className="card-name"> Name: {props.name} </h1>
-        //         <h3 className="card-genus"> Genus: {props.genus} </h3>
-        //         <button> Add to cart </button>
-        //     </div>
-        // </main>
+
     )   
 }
 

@@ -1,23 +1,45 @@
 main{
-    height: 100vh;
-    background-color: #fff;
+    height: auto;
+    background-color: rgb(236, 229, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    padding: 7% 0;
 }
-
 .cardProduct{
-    width: 30%;
-    height: 250px;
-    box-shadow: 0 0 20px rgba(59, 59, 59, 0.2);
+    width: 43%;
+    height: 300px;
+    background-color: rgb(236, 229, 229);
+    box-shadow: -5px -5px 15px rgb(248, 242, 242), 
+    5px 5px 15px rgba(66, 65, 65, 0.2);
     border-radius: 15px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    margin: 3%;
+    transition: .2s;
+}
+.cardProduct:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 h1{
     color: red;
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-/* @media screen and (min-width: 768px){
-   
-} */
+@media screen and (min-width: 768px){
+    main{
+        padding: 2% 0;
+        height: 100vh;
+        justify-content: left;
+    }
+    .cardProduct{
+        width: 15%;     
+        margin: 0 2%;
+    }  
+}

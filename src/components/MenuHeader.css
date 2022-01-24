@@ -8,7 +8,7 @@ header{
 }
 
 img{
-    width: 10%;
+    width: 30%;
     margin: 0 0 0 3%;
 }
 
@@ -22,4 +22,12 @@ img{
     box-shadow: 5px 5px 10px #c3c3c3f0,
     -5px -5px 10px #fcfcfc;
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px){
+    img{
+        width: 10%;
+        margin: 0 0 0 3%;
+    }
+    
 }
