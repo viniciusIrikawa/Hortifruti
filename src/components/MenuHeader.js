@@ -1,5 +1,4 @@
 import './MenuHeader.css'
-import logo from '../images/logo_Frexco.png'
 import {BsCart4} from 'react-icons/bs';
 
 function MenuHeader(){
