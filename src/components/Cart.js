@@ -1,13 +1,23 @@
-import './Cart.css'
+import React from 'react';
 
-function Cart(){
+const Cart = ({ cartItems }) => {
+  return (
 
-    return(
+    <div className='cart-items'> 
+        <div className='cart-items-header'> Cart Items </div>
+
+        {cartItems.lenght === 0 && <div className='cart-items-empty'> No items are added. </div>}
+
         <div>
-            <h1> CART </h1>
+            {cartItems.map((item) => {
+                <div key={cartItems.id}>
+                    <h1 className='list-items'> {cartItems.name} </h1>
+                </div>
+            })}
         </div>
-    )   
-}
+    </div>
 
-export default Cart
+  )
+};
 
+export default Cart;
