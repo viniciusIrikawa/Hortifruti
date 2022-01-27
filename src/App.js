@@ -13,7 +13,7 @@ function App() {
     <div>
       <MenuHeader/>
       <Card/>
-      <Cart cartItems={cartItems}/>
+      {/* <Cart cartItems={cartItems}/> */}
 
     </div>
   );

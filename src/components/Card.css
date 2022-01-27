@@ -33,6 +33,7 @@ main{
 .cardProduct img{
     width: 100%;
     object-fit: cover;
+    margin: 0;
 }
 
 .cardProduct h1{
@@ -69,5 +70,10 @@ button{
         width: 15%;     
         margin: 0.5% 2% 0.5% 2%;
     }
-
+    .cardProduct .image-fruit{
+        width: 100%;
+        height: 25%;
+        overflow: hidden;
+    }
+   
 }
