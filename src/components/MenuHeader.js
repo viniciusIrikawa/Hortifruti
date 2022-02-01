@@ -1,12 +1,11 @@
-import './MenuHeader.css'
 import {BsCart4} from 'react-icons/bs';
+import './MenuHeader.css'
 
 function MenuHeader(){
     return(
         <header>
-                {/* <img className="logo" src={logo} alt="" /> */}
                 <a href='#'> FRUIT MARKET </a>
-                <h1 className="cart"><BsCart4/> </h1>
+                {/* <button className='cart' type='button'>  <BsCart4/> </button> */}
         </header>
 
 

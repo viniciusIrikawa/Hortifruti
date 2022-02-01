@@ -52,13 +52,15 @@ main{
     align-items: center;
     margin-top: 10%;
 }
-button{
+.btn-add{
     background-color: rgb(248, 241, 241);
     position: absolute;
     bottom: 0;
     width: 100%;
     border: none;
     height: 13%;
+    cursor: pointer;
+    outline: none;
 }
 @media screen and (min-width: 768px){
     main{
