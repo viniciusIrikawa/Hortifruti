@@ -1,10 +1,14 @@
-import React, {useState, useEffect} from 'react';
+// import React, {useState, useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {BsCart4} from 'react-icons/bs';
+import Context from '../Context';
 import './Card.css'
 
 function Card(){
-  const [product, setProduct] = useState([])
-  const [cartItems, setCartItems] = useState([])
+//   const [product, setProduct] = useState([])
+//   const [cartItems, setCartItems] = useState([])
+
+    const {product, setProduct, cartItems, setCartItems} = useContext(Context);
 
   useEffect(() => {
       fetch('./products.json')
@@ -19,7 +23,7 @@ function Card(){
 
     return(
         <main>
-            <button className='cart' type='button'>  <BsCart4/> (x{cartItems.length})</button>
+            {/* <button className='cart' type='button'>  <BsCart4/> (x{cartItems.length})</button> */}
             {product.map(item => 
                 <div className="cardProduct" key={item.id}>
                     <div className='image-fruit'>

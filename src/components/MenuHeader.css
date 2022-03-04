@@ -7,9 +7,11 @@ header{
     border-bottom: 4px solid #60d352;
     position: relative;
 }
-
-header a{
-    margin: 0 0 0 5%;
+header .wrapperLogo{
+    width: 50%;
+}
+header .wrapperLogo a{
+    margin-left: 5%;
     color: #60d352;
     padding: 10px;
     font-size: 1.3rem;
@@ -19,13 +21,11 @@ header a{
     box-shadow: -5px -5px 15px rgb(247, 244, 244), 
     5px 5px 10px rgba(182, 178, 178, 0.843)
 }
-
-.cart{
+.wrapperButton{
+    margin-right: 8%;
+}
+.wrapperButton a{
     outline: none;
-    position: absolute;
-    top: 2.2vh;
-    right: 5%;
-    /* margin: 0 10% 0 0; */
     color: #60d352;
     padding: 10px 15px;
     background-color: #dfdfdf ;
@@ -35,4 +35,18 @@ header a{
     -5px -5px 10px #fcfcfc;
     cursor: pointer;
     border: none;
+    position: relative;
 } 
+.wrapperButton .counter{
+    position: absolute;
+    top: -2%;
+    right: -24%;
+    color: #fff;
+    background-color: rgb(255, 101, 101);
+    padding: 2px 7px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+

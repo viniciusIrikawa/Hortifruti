@@ -1,21 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Context from '../Context';
 
-const Cart = ({ cartItems }) => {
+const Cart = () => {
+  const {cartItems} = useContext(Context);
+
   return (
-
-    <div className='cart-items'> 
-        <div className='cart-items-header'> Cart Items </div>
-
-        {cartItems.lenght === 0 && <div className='cart-items-empty'> No items are added. </div>}
-
-        <div>
-            {cartItems.map((item) => {
-                <div key={cartItems.id}>
-                    <h1 className='list-items'> {cartItems.name} </h1>
-                </div>
-            })}
-        </div>
-    </div>
+      <div>
+        <h1> VISUALIZAÇÃO DO CARRINHO </h1>
+        <h2> Quantidade: </h2>
+        <span> (x{cartItems.length}) </span>
+      </div>
 
   )
 };
