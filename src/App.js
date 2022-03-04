@@ -19,7 +19,6 @@ function App() {
             <Route exact path='/' element={<Card/>}/>
             <Route exact path='/Cart' element={<Cart/>}/>
           </Routes>
-          {/* <Card/> */}
         </BrowserRouter>
       </Context.Provider>
     </div>

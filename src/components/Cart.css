@@ -1,0 +1,19 @@
+.view-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+}
+
+.view-products h1{
+    color: rgb(37, 34, 34);
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    text-transform: uppercase;
+} 
+
+.itemCart{
+    border: 2px solid red;
+    background-color: green;
+}
