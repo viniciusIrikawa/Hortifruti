@@ -12,7 +12,15 @@ function Card(){
     }, [])
   
     const addProduct = (product) => {
-        setCartItems([...cartItems, product])
+        const itemExist = cartItems.find( item => item.id === product.id);
+        if(itemExist){
+            setCartItems(cartItems.map((item) => item.id === product.id ? 
+            {...itemExist, quantity: itemExist.quantity + 1}: item ))
+        }
+        else{
+            setCartItems([...cartItems, {...product, quantity:1} ])        
+        }
+        // setCartItems([...cartItems, product])
     }
 
     return(

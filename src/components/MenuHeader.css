@@ -39,8 +39,8 @@ header .wrapperLogo a{
 } 
 .wrapperButton .counter{
     position: absolute;
-    top: -2%;
-    right: -24%;
+    top: 10%;
+    right: -15%;
     color: #fff;
     background-color: rgb(255, 101, 101);
     padding: 2px 7px;

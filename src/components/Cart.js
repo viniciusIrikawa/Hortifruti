@@ -5,9 +5,9 @@ import './Cart.css'
 const Cart = () => {
   const {cartItems} = useContext(Context);
   console.log(cartItems)
-
+  
   const [quantity, setQuantity] = useState(1)
-
+  
   const increment = () => {
     if(quantity < 10){
       setQuantity(quantity + 1);
@@ -31,9 +31,9 @@ const Cart = () => {
                 <h3> {item.name} </h3>
                 <h4> {item.genus} </h4>
                 <div className='counter'> 
-                  <button onClick={decrement}> - </button>
+                  <button onClick={() => decrement()}> - </button>
                   <span> {quantity} </span>
-                  <button onClick={increment}> + </button>
+                  <button onClick={() => increment()}> + </button>
                 </div>
               </div>
             </div>
