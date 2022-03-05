@@ -1,6 +1,6 @@
 header{
     background-color: #dfdfdf;
-    padding: 20px 0;
+    padding: 25px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,7 +8,7 @@ header{
     position: relative;
 }
 header .wrapperLogo{
-    width: 50%;
+    width: 65%;
 }
 header .wrapperLogo a{
     margin-left: 5%;
