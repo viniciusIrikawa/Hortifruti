@@ -13,6 +13,17 @@
     font-size: 1.5rem;
     text-transform: uppercase;
 } 
+.view-products .no-items-added{
+    color: red;
+    background-color: #ffcece;
+    width: 100%;
+    padding: 2% 0;
+    font-size: 1.15rem;
+    text-align: center;
+}
+.no-items-added a{
+    color: rgb(0, 0, 0);
+}
 
 .itemCart{
     display: flex;
@@ -60,6 +71,7 @@
     border-radius: 50px;
     font-size: 1.1rem;
 }
+
 
 @media screen and (min-width: 768px){
     .view-products{

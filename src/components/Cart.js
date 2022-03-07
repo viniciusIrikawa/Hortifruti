@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Context from '../Context';
 import './Cart.css'
 
@@ -17,13 +18,16 @@ const Cart = () => {
     if(quantity > 0){
       setQuantity(quantity + -1);
     }
-
   }
 
   return (
       <section className='view-products'>
           <h1> My cart </h1>
-          
+          {cartItems.length == 0 && 
+            <span className='no-items-added'> No items added. 
+                <Link exact to={'/'}> Go back </Link></span>
+          }  
+
           {cartItems.map(item => 
             <div className='itemCart' key={item.id}>
               <img className='imgCart' src={item.img}/>
@@ -42,6 +46,6 @@ const Cart = () => {
       </section>
 
   )
-};
+}
 
-export default Cart;
+export default Cart

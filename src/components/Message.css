@@ -1,0 +1,40 @@
+.wrapper-msg{
+    position: fixed;
+    font-size: 1.2rem;
+    bottom: 5%;
+    width: 80%;
+    height: 5%;
+    color: #fff;
+    background-color: #38c838d5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 3px solid #00ff00;
+}
+.wrapper-msg .msgAdded{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+.wrapper-msg .close-msg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    color: 
+    #fff;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px){
+    .wrapper-msg{
+        width: 15%;
+    }
+   
+}

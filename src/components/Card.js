@@ -1,10 +1,12 @@
-import React, {useEffect, useContext} from 'react';
+import React, {useEffect, useContext, useState} from 'react';
 import Context from '../Context';
+import Message from './Message';
 import './Card.css'
 
 function Card(){
     const {product, setProduct, cartItems, setCartItems} = useContext(Context);
-    
+    // const [isToggled, setIsToggled] = useState(false)
+
     useEffect(() => {
         fetch('./products.json')
         .then(res => res.json())
@@ -16,11 +18,11 @@ function Card(){
         if(itemExist){
             setCartItems(cartItems.map((item) => item.id === product.id ? 
             {...itemExist, quantity: itemExist.quantity + 1}: item ))
+            
         }
         else{
-            setCartItems([...cartItems, {...product, quantity:1} ])        
+            setCartItems([...cartItems, product])        
         }
-        // setCartItems([...cartItems, product])
     }
 
     return(
@@ -34,9 +36,15 @@ function Card(){
                         <h1 className="card-name"> Name: {item.name} </h1>
                         <h3 className="card-genus"> Genus: {item.genus} </h3>
                     </div> 
-                    <button className='btn-add' onClick={() => addProduct(item)}> Add to cart </button>
+                    <button className='btn-add' 
+                            onClick={() => {
+                                addProduct(item)
+                                // setIsToggled(true)
+                            }}> Add to cart 
+                    </button>
                 </div>
             )}
+            {/* {isToggled && <Message/>} */}
         </main>
 
     )   
