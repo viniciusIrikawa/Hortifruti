@@ -22,11 +22,13 @@ const Cart = () => {
 
   return (
       <section className='view-products'>
-          <h1> My cart </h1>
           {cartItems.length == 0 && 
-            <span className='no-items-added'> No items added. 
-                <Link exact to={'/'}> Go back </Link></span>
+          <div className='no-items-added'>
+            <span> No items added. </span>
+            <Link exact to={'/'}> Go back </Link>
+          </div>
           }  
+          <h1> My cart </h1>
 
           {cartItems.map(item => 
             <div className='itemCart' key={item.id}>

@@ -17,12 +17,22 @@
     color: red;
     background-color: #ffcece;
     width: 100%;
-    padding: 2% 0;
+    padding: 5% 0;
     font-size: 1.15rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .no-items-added a{
     color: rgb(0, 0, 0);
+    border: 2px solid red;
+    width: 120px;
+    text-decoration: none;
+    margin: 10px 0;
+    border-radius: 2px;
+    padding: 5px 0;
 }
 
 .itemCart{
@@ -86,4 +96,7 @@
         margin: 2% 0 3% 0;
 
     } 
+    .view-products .no-items-added{
+        padding: 2% 0;
+    }
 }
