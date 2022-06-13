@@ -16,8 +16,8 @@ function App() {
         <BrowserRouter>
           <MenuHeader/>
           <Routes>
-            <Route exact path='/' element={<Card/>}/>
-            <Route exact path='/Cart' element={<Cart/>}/>
+            <Route path='/' element={<Card/>}/>
+            <Route path='/Cart' element={<Cart/>}/>
           </Routes>
         </BrowserRouter>
       </Context.Provider>

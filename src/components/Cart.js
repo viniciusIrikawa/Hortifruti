@@ -4,19 +4,22 @@ import Context from '../Context';
 import './Cart.css'
 
 const Cart = () => {
-  const {cartItems} = useContext(Context);
+  const {cartItems, setCartItems} = useContext(Context);
   console.log(cartItems)
   
-  const [quantity, setQuantity] = useState(1)
-  
-  const increment = () => {
-    if(quantity < 10){
-      setQuantity(quantity + 1);
-    }
+  const increment = (product) => {
+    const allItems = cartItems.find( item => item.id === product.id) 
+      if(allItems.quantity < 10){
+            setCartItems(cartItems.map((item) => item.id === product.id ? 
+            {...allItems, quantity: allItems.quantity + 1} : item ))
+        }
+
   }
-  const decrement = () => {
-    if(quantity > 0){
-      setQuantity(quantity + -1);
+  const decrement = (product) => {
+    const allItems = cartItems.find( item => item.id === product.id) 
+    if(allItems.quantity > 0){
+      setCartItems(cartItems.map((item) => item.id === product.id ? 
+      {...allItems, quantity: allItems.quantity - 1} : item ))
     }
   }
 
@@ -37,9 +40,9 @@ const Cart = () => {
                 <h3> {item.name} </h3>
                 <h4> {item.genus} </h4>
                 <div className='counter'> 
-                  <button onClick={() => decrement()}> - </button>
-                  <span> {quantity} </span>
-                  <button onClick={() => increment()}> + </button>
+                  <button onClick={() => decrement(item)}> - </button>
+                  <span> {item.quantity} </span>
+                  <button onClick={() => increment(item)}> + </button>
                 </div>
               </div>
             </div>
