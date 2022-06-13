@@ -11,11 +11,11 @@ function MenuHeader(){
     return(
         <header>
                 <div className='wrapperLogo'>
-                    <Link exact to={'/'}> FRUIT MARKET </Link>
+                    <Link to={'/'}> FRUIT MARKET </Link>
                 </div>
 
                 <div className='wrapperButton'>
-                    <Link exact to={'/Cart'}>  <BsCart4/> 
+                    <Link to={'/Cart'}>  <BsCart4/> 
                         <span className='counter'> {cartItems.length} </span>
                     </Link>
                     

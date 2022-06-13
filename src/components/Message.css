@@ -2,7 +2,7 @@
     position: fixed;
     font-size: 1.2rem;
     bottom: 5%;
-    width: 80%;
+    width: auto;
     height: 5%;
     color: #fff;
     background-color: #38c838d5;
@@ -16,8 +16,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: auto;
     height: 100%;
+    padding: 0 50px;
 
 }
 .wrapper-msg .close-msg{
@@ -31,10 +32,4 @@
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
-}
-@media screen and (min-width: 768px){
-    .wrapper-msg{
-        width: 15%;
-    }
-   
 }

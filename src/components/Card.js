@@ -6,6 +6,7 @@ import './Card.css'
 function Card(){
     const {product, setProduct, cartItems, setCartItems} = useContext(Context);
     // const [isToggled, setIsToggled] = useState(false)
+    const [state, setState] = useState([{itemName: '', isToggled: false}]);
 
     useEffect(() => {
         fetch('./products.json')
@@ -21,10 +22,15 @@ function Card(){
             
         }
         else{
-            setCartItems([...cartItems, product])        
+            setCartItems([...cartItems, product])     
         }
     }
 
+    const handleMessage = (itemName) => {
+        setState([{itemName: itemName, isToggled: true}])
+        console.log('Imprimindo: ')
+        console.log(state)
+    }
     return(
         <main>
             {product.map(item => 
@@ -40,13 +46,18 @@ function Card(){
                             onClick={() => {
                                 addProduct(item)
                                 // setIsToggled(true)
+                                handleMessage(item.name)
                             }}> Add to cart 
                     </button>
                 </div>
             )}
-            {/* {isToggled && <Message/>} */}
+            {/* {isToggled && cartItems.map((item, index) => 
+                <Message itemName={item.name} key={index} setToggle={setIsToggled} />)
+            } */}
+            {state[0].isToggled && cartItems.map((item, index) => 
+                <Message itemName={item.name} key={index} />)
+            }
         </main>
-
     )   
 }
 
