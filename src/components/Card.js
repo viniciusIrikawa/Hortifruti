@@ -6,7 +6,7 @@ import './Card.css'
 function Card(){
     const {product, setProduct, cartItems, setCartItems} = useContext(Context);
     // const [isToggled, setIsToggled] = useState(false)
-    const [state, setState] = useState([{itemName: '', isToggled: false}]);
+    // const [state, setState] = useState([{itemName: '', isToggled: false}]);
 
     useEffect(() => {
         fetch('./products.json')
@@ -18,7 +18,7 @@ function Card(){
         const itemExist = cartItems.find( item => item.id === product.id);
         if(itemExist){
             setCartItems(cartItems.map((item) => item.id === product.id ? 
-            {...itemExist, quantity: itemExist.quantity + 1}: item ))
+            {...itemExist, quantity: itemExist.quantity = 1}: item ))
             
         }
         else{
@@ -26,11 +26,11 @@ function Card(){
         }
     }
 
-    const handleMessage = (itemName) => {
-        setState([{itemName: itemName, isToggled: true}])
-        console.log('Imprimindo: ')
-        console.log(state)
-    }
+    // const handleMessage = (itemName) => {
+    //     setState([{itemName: itemName, isToggled: true}])
+    //     console.log('Imprimindo: ')
+    //     console.log(state)
+    // }
     return(
         <main>
             {product.map(item => 
@@ -46,7 +46,7 @@ function Card(){
                             onClick={() => {
                                 addProduct(item)
                                 // setIsToggled(true)
-                                handleMessage(item.name)
+                                // handleMessage(item.name)
                             }}> Add to cart 
                     </button>
                 </div>
@@ -54,9 +54,9 @@ function Card(){
             {/* {isToggled && cartItems.map((item, index) => 
                 <Message itemName={item.name} key={index} setToggle={setIsToggled} />)
             } */}
-            {state[0].isToggled && cartItems.map((item, index) => 
+            {/* {state[0].isToggled && cartItems.map((item, index) => 
                 <Message itemName={item.name} key={index} />)
-            }
+            } */}
         </main>
     )   
 }
