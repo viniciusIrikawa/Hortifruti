@@ -9,9 +9,12 @@ function Card(){
     // const [state, setState] = useState([{itemName: '', isToggled: false}]);
 
     useEffect(() => {
-        fetch('./products.json')
-        .then(res => res.json())
-        .then(data => {setProduct(data)})  
+        const fetchData = async () => {
+            const response = await fetch('./products.json');
+            const json = await response.json();
+            setProduct(json)
+        }
+        fetchData();
     }, [])
   
     const addProduct = (product) => {
