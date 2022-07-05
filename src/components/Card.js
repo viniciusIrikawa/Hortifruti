@@ -44,6 +44,7 @@ function Card(){
                     <div className='wrapper-content'>
                         <h1 className="card-name"> Name: {item.name} </h1>
                         <h3 className="card-genus"> Genus: {item.genus} </h3>
+                        <span className='card-price'> ${item.price} </span>
                     </div> 
                     <button className='btn-add' 
                             onClick={() => {

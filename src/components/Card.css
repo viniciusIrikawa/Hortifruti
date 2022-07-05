@@ -19,6 +19,9 @@ main{
     transition: .2s;
     overflow: hidden;
     position: relative;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 .cardProduct:hover{
     cursor: pointer;
@@ -38,12 +41,14 @@ main{
 .cardProduct h1{
     color: rgb(113, 58, 7);
     font-size: 1.3rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .cardProduct h3{
     font-size: 1rem;   
     color: rgb(101, 82, 64);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cardProduct .card-price{
+    color: #60d352;
+    margin-top: 20px;
 }
 .wrapper-content{
     display: flex;

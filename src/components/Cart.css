@@ -67,6 +67,11 @@
     color: rgb(66, 66, 66);
     
 }
+.description .price{
+    color: #60d352;
+    margin-left: 2%;
+}
+
 .counter{
     position: absolute;
     top: 50%;
@@ -76,10 +81,19 @@
 .counter button{
     cursor: pointer;
     margin: 0 2px;
+}
+.counter .btn-decrement,
+.counter .btn-increment{
     width: 30px;
     border: none;
     border-radius: 50px;
     font-size: 1.1rem;
+}
+.counter .btn-remove{
+    border: 2px solid #ab0606db;
+    padding: 2px 5px;
+    color: #ab0606db;
+    border-radius: 3px;
 }
 
 
