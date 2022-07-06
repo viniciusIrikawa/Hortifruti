@@ -1,32 +1,27 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Context from '../Context';
 import './Cart.css'
 
 const Cart = () => {
   const {cartItems, setCartItems} = useContext(Context);
-  console.log(cartItems)
-
-  const listItems = (product) => {
-    const allItems = cartItems.find( item => item.id === product.id) 
-    return allItems;
-  }
+  // console.log(cartItems)
 
   const increment = (product) => {
-    // const allItems = cartItems.find( item => item.id === product.id) 
+    const allItems = cartItems.find( item => item.id === product.id) 
 
-    if(listItems(product).quantity < 10){
+    if(allItems.quantity < 10){
       setCartItems(cartItems.map((item) => item.id === product.id ? 
-      {...listItems(product), quantity: listItems(product).quantity + 1} : item ))
+      {...allItems, quantity: allItems.quantity + 1} : item ))
     }
   }
   
   const decrement = (product) => {
-    // const allItems = cartItems.find( item => item.id === product.id) 
+    const allItems = cartItems.find( item => item.id === product.id) 
 
-    if(listItems(product).quantity > 0){
+    if(allItems.quantity > 0){
       setCartItems(cartItems.map((item) => item.id === product.id ? 
-      {...listItems(product), quantity: listItems(product).quantity - 1} : item ))
+      {...allItems, quantity: allItems.quantity - 1} : item ))
     }
   }
 
@@ -41,7 +36,7 @@ const Cart = () => {
           {cartItems.length == 0 && 
             <div className='no-items-added'>
               <span> No items added. </span>
-              <Link exact to={'/'}> Go back </Link>
+              <Link to={'/'}> Go back </Link>
             </div>
           } 
 
@@ -53,7 +48,7 @@ const Cart = () => {
               <div className='description'>
                 <h3> {item.name} </h3>
                 <h4> {item.genus} </h4>
-                <span className='price'> ${item.price} </span>
+                <span className='price'> ${ (item.price * item.quantity).toFixed(2) } </span>
                 <div className='counter'> 
                   <button className='btn-decrement' onClick={() => decrement(item)}> - </button>
                     {item.quantity == 0 ? 
