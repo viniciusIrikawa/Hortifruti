@@ -1,8 +1,8 @@
 ### 🤔About 
 
 This project simulates the logic of an Add to Cart system for E-commerce applications and increment/decrement funcionality. It has two pages:
-- Home page: It has a sidebar with filter by category and a product grid;
-- Cart page: Shows all items that have been added on the cart, the promo code input field, the subtotal and total price.
+- Home page: A product grid;
+- Cart page: Shows all items that have been added on the cart.
 
 
 ### Requirements
